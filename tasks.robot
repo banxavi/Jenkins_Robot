@@ -17,8 +17,12 @@ Library         RPA.core.notebook
 
 *** Keywords ***
 Open the robot order website
-    ${website}=    Get Secret    credentials
-    Open Available Browser  ${website}[url] 
+    # ${website}=    Get Secret    credentials
+    Open Available Browser  https://robotsparebinindustries.com/#/robot-order
+    Maximize Browser Window
+
+Open the robot order website2
+    Open Available Browser  https:/google.com
     Maximize Browser Window
 
 Get orders
@@ -53,7 +57,7 @@ Preview the robot
 Submit the order
     Click Button    //button[@id="order"]
     Sleep    2 seconds
-    FOR  ${i}  IN RANGE  ${100}
+    FOR  ${i}  IN RANGE  ${5}
         ${alert}=  Is Element Visible  //div[@class="alert alert-danger"]  
         Run Keyword If  '${alert}'=='True'  Click Button  //button[@id="order"] 
         Exit For Loop If  '${alert}'=='False'       
@@ -81,12 +85,16 @@ Order robots from RobotSpareBin Industries Inc
         Close the annoying modal
         Fill the form    ${row}
         Preview the robot
-        Submit the order
-        Export Pdf file and take screenshot    ${row}    
-        Go to order another robot
+        # Submit the order
+        # Export Pdf file and take screenshot    ${row}    
+        # Go to order another robot
     END
     Create a ZIP file of the receipts
     [Teardown]      Close Browser
+
+Case 2 Open Web for Testing 
+    Open the robot order website2
+
    
 
 
