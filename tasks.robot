@@ -85,9 +85,9 @@ Order robots from RobotSpareBin Industries Inc
         Close the annoying modal
         Fill the form    ${row}
         Preview the robot
-        # Submit the order
-        # Export Pdf file and take screenshot    ${row}    
-        # Go to order another robot
+        Submit the order
+        Export Pdf file and take screenshot    ${row}    
+        Go to order another robot
     END
     Create a ZIP file of the receipts
     [Teardown]      Close Browser
