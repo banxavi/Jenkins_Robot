@@ -6,7 +6,7 @@ pipeline {
 	    stage('Run Robot Tests') {
 	      steps {
 		      		sh 'python3 --version'
-		      		sh 'python3 -m pip install robotframework'
+		      		sh 'pip install -r requirements.txt'
 		      		sh 'robot tasks.robot'
 		        	sh 'exit 0'
 	      		}
