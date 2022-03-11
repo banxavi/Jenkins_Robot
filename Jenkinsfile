@@ -6,7 +6,7 @@ pipeline {
 	    stage('Run Robot Tests') {
 	      steps {
 		      		sh 'python3 --version'
-		      		sh 'python3 -m robot tasks.robot'
+		      		sh 'python3 pip list'
 		        	sh 'exit 0'
 	      		}
 	    
