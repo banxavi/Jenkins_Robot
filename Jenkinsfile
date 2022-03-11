@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'python:3.8.10' } }
+  agent { docker { image 'python:3.7.3' } }
 
   stages {
     
@@ -9,7 +9,7 @@ pipeline {
 				sh 'python3 -m pip install --upgrade pip'
 		      		sh 'python3 -m pip install -r requirements.txt'
 		      		sh 'python3 -m pip list'
-		      		sh 'python3 -m robot.run tasks.robot'
+		      		sh 'python3 -m robot tasks.robot'
 		      		sh 'exit 0'
 	      		}
 	    
