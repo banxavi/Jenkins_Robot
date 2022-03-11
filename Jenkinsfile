@@ -15,7 +15,7 @@ pipeline {
 		        }
 	  stage('Run Robot Test') {
 	      steps {
-		      		sh 'python3 -m robot tasks.robot'
+		      		sh 'python3 -m robot -i  Jenkins_Robot/tasks.robot'
 			
 	      		}
 	    
