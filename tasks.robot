@@ -4,7 +4,7 @@ Documentation   Orders robots from RobotSpareBin Industries Inc.
 ...             Saves the screenshot of the ordered robot.
 ...             Embeds the screenshot of the robot to the PDF receipt.
 ...             Creates ZIP archive of the receipts and the images.
-Library         RPA.Browser
+Library         RPA.Browser.Selenium
 Library         RPA.Robocloud.Secrets
 Library         RPA.PDF
 Library         RPA.Tables
