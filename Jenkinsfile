@@ -6,6 +6,7 @@ pipeline {
 	    stage('Setup Environment') {
 	      steps {
 		      		sh 'python3 -m pip install -r requirements.txt'
+					sh 'python -c "import sys; print(sys.path)'
 	      		}
 	    
 		        }
