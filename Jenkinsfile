@@ -7,7 +7,6 @@ pipeline {
 	      steps {
 		      		sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip list'
-					sh 'python3 -m robotframework --version'
 	      		}
 	    
 		        }
