@@ -22,6 +22,3 @@ rpaframework-dialogs==0.4.2
 rpaframework-pdf==1.30.4
 selenium==3.141.0
 urllib3==1.22
-webdrivermanager==0.10.0
-Werkzeug==2.0.3
-
