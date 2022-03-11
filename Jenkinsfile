@@ -7,7 +7,7 @@ pipeline {
 	      steps {
 		      		sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip list'
-					sudo 'python3 --version'
+					sh 'python3 --version'
 					// sudo 'robot --version'
 
 				
