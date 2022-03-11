@@ -1,11 +1,11 @@
 tasks:
   Run all tasks:
-    shell: python3 -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
+    shell: python3 -m robot --report NONE --outputdir /home/nhat/Jenkins_Robot/results --logtitle "Task log" tasks.robot
 
 condaConfigFile: conda.yaml
 artifactsDir: output
 PATH:
-  - .
+  - .git 
 PYTHONPATH:
   - .
 ignoreFiles:

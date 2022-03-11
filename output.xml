@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220311 08:50:23.400" rpa="true" schemaversion="2">
+<suite id="s1" name="Tasks" source="/home/nhat/Jenkins_Robot/tasks.robot">
+<test id="s1-t1" name="Case 2 Open Web for Testing">
+<kw name="Open the robot order website2">
+<kw name="Open Available Browser" library="RPA.Browser">
+<arg>https:/google.com</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220311 08:50:27.496" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220311 08:50:27.526" level="INFO">Created download root directory: /home/nhat/.robocorp/webdrivers</msg>
+<msg timestamp="20220311 08:50:27.527" level="INFO">Created symlink directory: /home/nhat/.robocorp/webdrivers</msg>
+<msg timestamp="20220311 08:50:27.529" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220311 08:50:29.581" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220311 08:50:29.582" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220311 08:50:29.582" level="INFO">Opening url 'https:/google.com'</msg>
+<status status="PASS" starttime="20220311 08:50:27.494" endtime="20220311 08:50:31.993"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220311 08:50:31.994" endtime="20220311 08:50:32.104"/>
+</kw>
+<status status="PASS" starttime="20220311 08:50:27.492" endtime="20220311 08:50:32.106"/>
+</kw>
+<status status="PASS" starttime="20220311 08:50:27.477" endtime="20220311 08:50:32.107"/>
+</test>
+<doc>Orders robots from RobotSpareBin Industries Inc.
+Saves the order HTML receipt as a PDF file.
+Saves the screenshot of the ordered robot.
+Embeds the screenshot of the robot to the PDF receipt.
+Creates ZIP archive of the receipts and the images.</doc>
+<status status="PASS" starttime="20220311 08:50:23.406" endtime="20220311 08:50:32.110"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220311 08:50:25.108" level="WARN">This is a deprecated import that will be removed in favor of RPA.Browser.Selenium</msg>
+</errors>
+</robot>
