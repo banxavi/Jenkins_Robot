@@ -7,7 +7,6 @@ pipeline {
 	      steps {
 		      		sh 'python3 --version'
 		      		sh 'python3 -m pip install --upgrade pip'
-		      		sh 'python3 -m pip install -r requirements.txt'
 		      		sh 'robot tasks.robot'
 		        	sh 'exit 0'
 	      		}
