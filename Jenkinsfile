@@ -5,12 +5,13 @@ pipeline {
     
 	    stage('Setup Environment') {
 	      steps {
+			  		sh 'cat /etc/os-release'
 		      		sh 'python3 --version'
 					sh 'python3 -m pip install --upgrade pip'
 		      		sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip install --upgrade robotframework-seleniumlibrary'
 		      		sh 'python3 -m pip list'
-		      		sh 'python3 -m robot.run tasks.robot'
+		      		sh 'python3 -m robotframework tasks.robot'
 		      		sh 'exit 0'
 	      		}
 	    
