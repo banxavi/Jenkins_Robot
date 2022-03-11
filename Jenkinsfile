@@ -17,7 +17,7 @@ pipeline {
 	  stage('Run Robot Test') {
 	      steps {
 			  
-		      		sh 'robot tasks.robot'
+		      		sh 'sudo robot tasks.robot'
 		      		sh 'exit 0'			
 	      		}
 	    
