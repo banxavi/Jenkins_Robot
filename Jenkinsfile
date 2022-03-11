@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-      label 'qatest'
-  }
+  agent { docker { image 'python:3.10.1-alpine' } }
   environment {
     QA_SERVER = 'https://qa.application.com/'
     CT_SERVER = 'http://ct.application.com/'
@@ -16,10 +14,8 @@ pipeline {
     
 	    stage('Run Robot Tests') {
 	      steps {
-		        	sh 'python3 -m rflint --ignore LineTooLong myapp'
-		        	sh 'python3 -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --outputdir reports1 myapp/uiTest/testCases/smokeSuite/'
-		        	sh 'python3 -m robot.run --NoStatusRC --variable SERVER:${CT_SERVER} --rerunfailed reports1/output.xml --outputdir reports myapp/uiTest/testCases/smokeSuite/'
-		        	sh 'python3 -m robot.rebot --merge --output reports/output.xml -l reports/log.html -r reports/report.html reports1/output.xml reports/output.xml'
+		        	sh 'python3 -m rflint --ignore LineTooLong Robot-Test'
+		        	sh 'python3 -m robot robot.task
 		        	sh 'exit 0'
 	      		}
 	      post {
