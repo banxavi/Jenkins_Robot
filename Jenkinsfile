@@ -5,7 +5,6 @@ pipeline {
     
 	    stage('Run Robot Tests') {
 	      steps {
-		        	sh 'python3 -m rflint --ignore LineTooLong Robot-Test'
 		      		sh 'python3 --version'
 		        	sh 'exit 0'
 	      		}
