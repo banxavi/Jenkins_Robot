@@ -5,7 +5,7 @@ pipeline {
     
 	    stage('Setup Environment') {
 	      steps {
-		      		sh 'python3 -m pip install -r requirements.txt'
+		      		// sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip list'
 					sh 'python3 --version'
 					// sudo 'robot --version'
@@ -17,7 +17,7 @@ pipeline {
 	  stage('Run Robot Test') {
 	      steps {
 			  
-		      		sh 'sudo robot tasks.robot'
+		      		sh 'robot tasks.robot'
 		      		sh 'exit 0'			
 	      		}
 	    
