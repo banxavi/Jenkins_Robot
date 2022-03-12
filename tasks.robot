@@ -78,25 +78,31 @@ Go to order another robot
     Click Button    //button[@id='order-another']
 
 *** Tasks ***
-Order robots from RobotSpareBin Industries Inc
-    Open the robot order website
-    ${orders}=    Get orders
-    FOR    ${row}    IN    @{orders}
-        Close the annoying modal
-        Fill the form    ${row}
-        Preview the robot
-        Submit the order
-        Export Pdf file and take screenshot    ${row}    
-        Go to order another robot
-    END
-    Create a ZIP file of the receipts
-    [Teardown]      Close Browser
+# Order robots from RobotSpareBin Industries Inc
+#     Open the robot order website
+#     ${orders}=    Get orders
+#     FOR    ${row}    IN    @{orders}
+#         Close the annoying modal
+#         Fill the form    ${row}
+#         Preview the robot
+#         Submit the order
+#         Export Pdf file and take screenshot    ${row}    
+#         Go to order another robot
+#     END
+#     Create a ZIP file of the receipts
+#     [Teardown]      Close Browser
 
-Case 2 Open Web for Testing 
-    Open the robot order website2
+# Case 2 Open Web for Testing 
+#     Open the robot order website2
 
    
 Auto Pass 
-    ${head}=    Convert To Integer    1234
+    ${head}=    Convert To Integer    12
+    Log    Hello World!
+    Log    ${CURDIR}
+
+    FOR     ${i}  IN  ${head}
+        Log     ${i}
+    END
 
 

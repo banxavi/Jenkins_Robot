@@ -8,6 +8,7 @@ pipeline {
 		      		sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip list'
 					sh 'python3 --version'
+					sh 'python3 -m rebot --version'
 				
 	      		}
 	    
@@ -15,7 +16,7 @@ pipeline {
 	  stage('Run Robot Test') {
 	      steps {
 			  
-		      		sh 'robot tasks.robot'
+		      		sh 'python3 -m robot.run tasks.robot'
 		      		sh 'exit 0'			
 	      		}
 	    
