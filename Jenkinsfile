@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker {image 'jafil/robotframework'} }
+  agent { docker {image 'robotframework/rfdocker'} }
 
   stages {
     
