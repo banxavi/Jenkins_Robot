@@ -16,7 +16,7 @@ pipeline {
 	  stage('Run Robot Test') {
 	      steps {
 			  
-		      		sh 'robot.run tasks.robot'
+		      		sh 'robot tasks.robot'
 		      		sh 'exit 0'			
 	      		}
 	    
