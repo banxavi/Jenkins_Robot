@@ -93,7 +93,7 @@ Go to order another robot
 
 Case 2 Open Web for Testing 
     Open the robot order website2
-    Maximize Browser Window
+    # Maximize Browser Window
    
 Auto Pass 
     ${head}=    Convert To Integer    12
@@ -103,7 +103,6 @@ Auto Pass
     FOR     ${i}  IN  ${head}
         Log     ${i}
     END
-Case3
-    Open Browser https:/google.com    Chrome
+
 
 
