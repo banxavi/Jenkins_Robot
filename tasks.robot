@@ -16,7 +16,7 @@ Open the robot order website
     Maximize Browser Window
 
 Open the robot order website2
-    Open Browser  https:/google.com
+    Open Browser  https:/google.com    Chrome
     
     # Maximize Browser Window
 
