@@ -19,9 +19,8 @@ pipeline {
 	      		}
 	    
 		        }
-		stage('Get Log') {
-			steps {
-				echo 'Get Results...'
+		post('Get Log') {
+			always {
 				script {
 				step(
 					[
