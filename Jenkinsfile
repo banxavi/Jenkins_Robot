@@ -19,7 +19,7 @@ pipeline {
 	      		}
 	    
 		        }
-		post('Get Log') {
+		post{
 			always {
 				script {
 				step(
