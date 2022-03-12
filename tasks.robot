@@ -7,7 +7,8 @@ Documentation   Orders robots from RobotSpareBin Industries Inc.
 
 Library     SeleniumLibrary
 
-Library         Browser
+| Library | Selenium2Library | run_on_failure=AppiumLibrary.CapturePageScreenshot
+| Library | AppiumLibrary | run_on_failure=AppiumLibrary.CapturePageScreenshot
 
 
 *** Keywords ***
