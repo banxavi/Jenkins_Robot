@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker {image 'ppodgorsek/robot-framework'} }
+  agent { docker {image 'python:3.8.10' } }
 
   stages {
     
