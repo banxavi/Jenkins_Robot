@@ -100,6 +100,8 @@ Auto Pass
     ${head}=    Convert To Integer    12
     Log    Hello World!
     Log    ${CURDIR}
+    Log    Hello
+
 
     FOR     ${i}  IN  ${head}
         Log     ${i}
