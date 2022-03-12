@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker {image 'marketsquare/robotframework-browser'} }
+  agent { docker {image 'jafil/robotframework'} }
 
   stages {
     
