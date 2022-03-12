@@ -5,12 +5,11 @@ pipeline {
     
 	    stage('Setup Environment') {
 	      steps {	
-			  		// sh 'robot --version'
-					// sh 'python3 --version'	
+			  		sh 'python3 -m venv tutorial-env'
+			  		sh 'source tutorial-env/bin/activate'
 					sh 'pip list'
 					echo 'haha'			
 	      		}
-	    
 		        }
 	  stage('Run Robot Test') {
 	      steps {
