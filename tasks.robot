@@ -7,18 +7,8 @@ Documentation   Orders robots from RobotSpareBin Industries Inc.
 
 Library     SeleniumLibrary
 
+Library         Browser
 
-Library         RPA.Browser.Selenium
-Library         RPA.Robocloud.Secrets
-Library         RPA.PDF
-Library         RPA.Tables
-Library         RPA.Dialogs
-Library         RPA.Excel.Files
-Library         RPA.HTTP
-Library         RPA.FileSystem
-Library         RPA.Archive
-Library         RPA.core.notebook
-Library      SeleniumLibrary
 
 *** Keywords ***
 Open the robot order website
@@ -27,7 +17,8 @@ Open the robot order website
     Maximize Browser Window
 
 Open the robot order website2
-    Open Available Browser  https:/google.com
+    New Page  https:/google.com
+    
     # Maximize Browser Window
 
 Get orders
