@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker {image 'ppodgorsek/robot-framework'} }
+  agent { docker {image 'credit2go/rpaframework'} }
 
   stages {
     

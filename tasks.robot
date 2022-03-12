@@ -4,24 +4,26 @@ Documentation   Orders robots from RobotSpareBin Industries Inc.
 ...             Saves the screenshot of the ordered robot.
 ...             Embeds the screenshot of the robot to the PDF receipt.
 ...             Creates ZIP archive of the receipts and the images.
-
-# Library     SeleniumLibrary
-Library    SeleniumLibrary
-
+Library         RPA.Browser.Selenium
+Library         RPA.Robocloud.Secrets
+Library         RPA.PDF
+Library         RPA.Tables
+Library         RPA.Dialogs
+Library         RPA.Excel.Files
+Library         RPA.HTTP
+Library         RPA.FileSystem
+Library         RPA.Archive
+Library         RPA.core.notebook
 
 *** Keywords ***
 Open the robot order website
     # ${website}=    Get Secret    credentials
-
     Open Available Browser  https://robotsparebinindustries.com/#/robot-order
     Maximize Browser Window
 
 Open the robot order website2
-    Create Webdriver    chrome    executable_path=/usr/bin/google-chrome
-
-    Open Browser  https:/google.com    Chrome
-    
-    # Maximize Browser Window
+    Open Available Browser  https:/google.com
+    Maximize Browser Window
 
 Get orders
     ${csv_file}=  Download  https://robotsparebinindustries.com/orders.csv    overwrite=True
@@ -98,8 +100,6 @@ Auto Pass
     ${head}=    Convert To Integer    12
     Log    Hello World!
     Log    ${CURDIR}
-    Log    Hello
-
 
     FOR     ${i}  IN  ${head}
         Log     ${i}
