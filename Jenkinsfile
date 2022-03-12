@@ -6,9 +6,10 @@ pipeline {
 	    stage('Setup Environment') {
 	      steps {	
 			  		// sh 'robot --version'
-		      		sh 'python3 -m pip install -r requirements.txt'
-					// sh 'python3 -m pip install rpa'
-					// sh 'python3 -m pip install rpaframework'
+		      		// sh 'python3 -m pip install -r requirements.txt'
+					sh 'apt-get install libxml2-dev libxslt-dev python-dev'
+					sh 'python3 -m pip install rpa'
+					sh 'python3 -m pip install rpaframework'
 					// sh 'python3 --version'	
 					echo 'haha'			
 	      		}
