@@ -7,6 +7,7 @@ pipeline {
 	      steps {	
 			  		// sh 'robot --version'
 					// sh 'python3 --version'	
+					sh 'pip list'
 					echo 'haha'			
 	      		}
 	    
