@@ -92,8 +92,8 @@ Go to order another robot
 #     Create a ZIP file of the receipts
 #     [Teardown]      Close Browser
 
-# Case 2 Open Web for Testing 
-#     Open the robot order website2
+Case 2 Open Web for Testing 
+    Open the robot order website2
 
    
 Auto Pass 
