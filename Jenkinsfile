@@ -8,7 +8,7 @@ pipeline {
 			  		// sh 'python3 -m venv tutorial-env'
 			  		// sh 'source tutorial-env/bin/activate'
 					sh 'python3 -m pip install rpaframework'
-					sh 'python3 -m pip install Selenium2Library'
+					sh 'python3 -m pip install robotframework-selenium2library'
 					sh 'pip list'
 					echo 'hahaa'			
 	      		}
