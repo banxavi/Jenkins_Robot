@@ -19,5 +19,25 @@ pipeline {
 	      		}
 	    
 		        }
+		stage('Get Log') {
+			steps {
+				echo 'Get Results...'
+				script {
+				step(
+					[
+					$class                    : 'RobotPublisher',
+					outputPath                : '<insert/the/output/path>',
+					outputFileName            : "*.xml",
+					reportFileName            : "report.html",
+					logFileName               : "log.html",
+					disableArchiveOutput      : false,
+					passThreshold             : 100,
+					unstableThreshold         : 95.0,
+					otherFiles                : "*.png"
+					]
+				)
+				}  
+			}
+			}
 	  		}		
 	    }
