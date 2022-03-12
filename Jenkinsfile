@@ -7,7 +7,6 @@ pipeline {
 	      steps {	
 			  		// sh 'robot --version'
 					// sh 'python3 --version'	
-					sh 'pip install Selenium2Library'
 					sh 'pip list'
 					echo 'haha'			
 	      		}
