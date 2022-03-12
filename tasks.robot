@@ -12,10 +12,13 @@ Library    SeleniumLibrary
 *** Keywords ***
 Open the robot order website
     # ${website}=    Get Secret    credentials
+
     Open Available Browser  https://robotsparebinindustries.com/#/robot-order
     Maximize Browser Window
 
 Open the robot order website2
+    Create Webdriver    chrome    executable_path=/usr/bin/google-chrome
+
     Open Browser  https:/google.com    Chrome
     
     # Maximize Browser Window
