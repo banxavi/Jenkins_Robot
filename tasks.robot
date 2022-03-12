@@ -6,9 +6,7 @@ Documentation   Orders robots from RobotSpareBin Industries Inc.
 ...             Creates ZIP archive of the receipts and the images.
 
 # Library     SeleniumLibrary
-Library | SeleniumLibrary | run_on_failure=AppiumLibrary.CapturePageScreenshot
-
-Library         Browser
+Library    SeleniumLibrary
 
 
 *** Keywords ***
@@ -18,7 +16,7 @@ Open the robot order website
     Maximize Browser Window
 
 Open the robot order website2
-    New Page  https:/google.com
+    Open Browser  https:/google.com
     
     # Maximize Browser Window
 
