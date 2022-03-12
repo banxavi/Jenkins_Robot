@@ -14,7 +14,7 @@ Library         RPA.HTTP
 Library         RPA.FileSystem
 Library         RPA.Archive
 Library         RPA.core.notebook
-Library        SeleniumLibrary
+# Library        SeleniumLibrary
 | Library | Selenium2Library | run_on_failure=AppiumLibrary.CapturePageScreenshot
 *** Keywords ***
 Open the robot order website

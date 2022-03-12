@@ -5,8 +5,6 @@ pipeline {
     
 	    stage('Setup Environment') {
 	      steps {	
-			  		// sh 'python3 -m venv tutorial-env'
-			  		// sh 'source tutorial-env/bin/activate'
 					sh 'python3 -m pip install robotframework-selenium2library'
 					sh 'python3 -m pip install rpaframework'
 					sh 'pip list'
