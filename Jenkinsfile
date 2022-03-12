@@ -6,8 +6,6 @@ pipeline {
 	    stage('Setup Environment') {
 	      steps {	
 		      		sh 'python3 -m pip install -r requirements.txt'
-					sh 'python3 -m pip install psutil'
-					sh 'python3 -m pip install -U --pre robotframework-ride'
 					sh 'python3 -m pip list'
 					sh 'python3 --version'				
 	      		}
