@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker {image 'credit2go/rpaframework'} }
+  agent { docker {image 'marketsquare/robotframework-browser'} }
 
   stages {
     
