@@ -9,7 +9,7 @@ pipeline {
 			  		// sh 'source tutorial-env/bin/activate'
 					sh 'python3 -m pip install rpaframework'
 					sh 'pip list'
-					echo 'haha'			
+					echo 'hahaa'			
 	      		}
 		        }
 	  stage('Run Robot Test') {
