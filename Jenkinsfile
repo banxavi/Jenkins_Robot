@@ -8,6 +8,7 @@ pipeline {
 			  		// sh 'robot --version'
 		      		// sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip install rpa'
+					sh 'python3 -m pip install rpaframework'
 					// sh 'python3 --version'	
 					echo 'haha'			
 	      		}
