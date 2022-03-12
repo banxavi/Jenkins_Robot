@@ -14,8 +14,6 @@ Library         RPA.HTTP
 Library         RPA.FileSystem
 Library         RPA.Archive
 Library         RPA.core.notebook
-# Library        SeleniumLibrary
-| Library | Selenium2Library | run_on_failure=AppiumLibrary.CapturePageScreenshot
 *** Keywords ***
 Open the robot order website
     # ${website}=    Get Secret    credentials
@@ -92,9 +90,9 @@ Go to order another robot
 #     Create a ZIP file of the receipts
 #     [Teardown]      Close Browser
 
-Case 2 Open Web for Testing 
-    Open the robot order website2
-    # Maximize Browser Window
+# Case 2 Open Web for Testing 
+#     Open the robot order website2
+#     Maximize Browser Window
    
 Auto Pass 
     ${head}=    Convert To Integer    12
@@ -106,4 +104,19 @@ Auto Pass
     END
 
 
+Auto Pass 2
+    ${head}=    Convert To Integer    12
+    Log    Hello World!
+    Log    ${CURDIR}
 
+    FOR     ${i}  IN  ${head}
+        Log     ${i}
+    END
+Auto Pass 3
+    ${head}=    Convert To Integer    12
+    Log    Hello World!
+    Log    ${CURDIR}
+
+    FOR     ${i}  IN  ${head}
+        Log     ${i}
+    END
