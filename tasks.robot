@@ -5,9 +5,9 @@ Documentation   Orders robots from RobotSpareBin Industries Inc.
 ...             Embeds the screenshot of the robot to the PDF receipt.
 ...             Creates ZIP archive of the receipts and the images.
 
-Library     SeleniumLibrary
 
-| Library | Selenium2Library | run_on_failure=AppiumLibrary.CapturePageScreenshot
+
+| Library | SeleniumLibrary | run_on_failure=AppiumLibrary.CapturePageScreenshot
 | Library | AppiumLibrary | run_on_failure=AppiumLibrary.CapturePageScreenshot
 
 
