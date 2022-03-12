@@ -14,7 +14,7 @@ Library         RPA.HTTP
 Library         RPA.FileSystem
 Library         RPA.Archive
 Library         RPA.core.notebook
-
+Library        SeleniumLibrary
 *** Keywords ***
 Open the robot order website
     # ${website}=    Get Secret    credentials
@@ -103,5 +103,7 @@ Auto Pass
     FOR     ${i}  IN  ${head}
         Log     ${i}
     END
+Case3
+    Open Browser https:/google.com    Chrome
 
 
