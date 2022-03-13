@@ -8,6 +8,7 @@ pipeline {
 				sh "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub"
 				sh "apt-get update -y"
 				sh	"apt-get install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4 -y"
+				sh  'dpkg -i google-chrome-stable_current_amd64.deb'
 				sh	"apt-get install google-chrome-stable -y"
 				sh	"apt-get install xvfb gtk2-engines-pixbuf -y"
 				sh	"apt-get install xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable -y"
