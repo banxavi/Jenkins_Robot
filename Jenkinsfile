@@ -4,7 +4,7 @@ pipeline {
   stages {
 	  	stage('Get Google-Chrome') {
 			steps {
-				echo "deb http://dl.google.com/linux/chrome/deb/ stable main"
+				sh "echo deb http://dl.google.com/linux/chrome/deb/ stable main | apt-key add -"
 				sh "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub"
 				sh "apt-get update -y"
 				sh	"apt-get install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4 -y"
