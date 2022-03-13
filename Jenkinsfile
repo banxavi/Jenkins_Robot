@@ -12,6 +12,18 @@ pipeline {
 					echo 'hahaa'			
 	      		}
 		        }
+		stage('Get Google-Chrome') {
+			steps {
+				echo "deb http://dl.google.com/linux/chrome/deb/ stable main"
+				sh "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -"
+				sh "apt-get update"
+				sh	"apt-get install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4"
+				sh	"apt-get install google-chrome-stable"
+				sh	"apt-get install xvfb gtk2-engines-pixbuf"
+				sh	"apt-get install xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable"
+				sh	"apt-get install imagemagick x11-apps"
+			}
+		}
 	  stage('Run Robot Test') {
 	      steps {
 			  
