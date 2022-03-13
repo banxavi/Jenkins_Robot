@@ -1,10 +1,11 @@
 pipeline {
-  agent { docker {image 'python:3.8.10' } }
+  agent { docker {image 'python:3.8.10' args '-u root' } }
 
   stages {
     
 	    stage('Setup Environment') {
-	      steps {	
+	      steps {	sh 'apt-get update'
+		  			sh 'sudo'
 					sh 'python3 -m pip install robotframework-selenium2library'
 					sh 'python3 -m pip install rpaframework'
 					sh 'pip list'
