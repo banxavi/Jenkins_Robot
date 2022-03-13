@@ -2,17 +2,7 @@ pipeline {
   agent { docker {image 'python:3.8.10'} }
 
   stages {
-    
-	    stage('Setup Environment') {
-	      steps {	sh 'apt-get update'
-		  			sh 'sudo'
-					sh 'python3 -m pip install robotframework-selenium2library'
-					sh 'python3 -m pip install rpaframework'
-					sh 'pip list'
-					echo 'hahaa'			
-	      		}
-		        }
-		stage('Get Google-Chrome') {
+	  	stage('Get Google-Chrome') {
 			steps {
 				echo "deb http://dl.google.com/linux/chrome/deb/ stable main"
 				sh "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -"
@@ -24,6 +14,14 @@ pipeline {
 				sh	"apt-get install imagemagick x11-apps"
 			}
 		}
+	    stage('Install Library') {
+	      steps {
+					sh 'python3 -m pip install robotframework-selenium2library'
+					sh 'python3 -m pip install rpaframework'
+					sh 'pip list'
+					echo 'hahaa'			
+	      		}
+		        }
 	  stage('Run Robot Test') {
 	      steps {
 			  
