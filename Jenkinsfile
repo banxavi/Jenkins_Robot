@@ -17,7 +17,7 @@ pipeline {
 		}
 	    stage('Install Library') {
 	      steps {
-			  		sh 'python3 -m pip install -r requirements.txt'
+			  		// sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip install robotframework-selenium2library'
 					sh 'python3 -m pip install rpaframework'
 					sh 'pip list'		
