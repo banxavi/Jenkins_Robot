@@ -17,10 +17,10 @@ pipeline {
 		}
 	    stage('Install Library') {
 	      steps {
+			  		sh 'python3 -m pip install -r requirements.txt'
 					sh 'python3 -m pip install robotframework-selenium2library'
 					sh 'python3 -m pip install rpaframework'
-					sh 'pip list'
-					echo 'hahaa'			
+					sh 'pip list'		
 	      		}
 		        }
 	  stage('Run Robot Test') {
@@ -44,7 +44,7 @@ pipeline {
 			              disableArchiveOutput: false,
 			              passThreshold       : 50,
 			              unstableThreshold   : 40,
-			              otherFiles          : "**/*.png,**/*.jpg",
+			              otherFiles          : ".png",
 			            ]
 		          	)
 		        }
