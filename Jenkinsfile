@@ -2,14 +2,13 @@ pipeline {
   agent { docker {image 'python:3.8.10'} }
 
   stages {
-	  	stage('Get Google-Chrome') {
+	  	stage('Get Google-Chrome Driver') {
 			steps {
 				sh "echo deb http://dl.google.com/linux/chrome/deb/ stable main"
 				sh "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub"
 				sh "apt-get update -y"
 				sh "wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 				sh	"apt-get install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4 -y"
-				// sh	"apt-get install google-chrome-stable -y"
 				sh 	"apt install ./google-chrome-stable_current_amd64.deb -y"
 				sh	"apt-get install xvfb gtk2-engines-pixbuf -y" 
 				sh	"apt-get install xfonts-cyrillic xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable -y"
@@ -26,7 +25,6 @@ pipeline {
 		        }
 	  stage('Run Robot Test') {
 	      steps {
-			  
 		      		sh 'robot tasks.robot'
 		      		sh 'exit 0'			
 	      		}

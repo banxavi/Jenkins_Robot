@@ -16,7 +16,6 @@ Library         RPA.Archive
 Library         RPA.core.notebook
 *** Keywords ***
 Open the robot order website
-    # ${website}=    Get Secret    credentials
     Open Available Browser  https://robotsparebinindustries.com/#/robot-order
     Maximize Browser Window
 
@@ -73,6 +72,12 @@ Create a ZIP file of the receipts
 Go to order another robot
     Click Button    //button[@id='order-another']
 
+
+Open the google website
+    Open Available Browser  https://google.com
+    Maximize Browser Window
+    Input Text     //input=[@class'gLFyf gsfi']    stackoverflow
+    
 *** Tasks ***
 
 Order robots from RobotSpareBin Industries Inc
@@ -89,16 +94,7 @@ Order robots from RobotSpareBin Industries Inc
     Create a ZIP file of the receipts
     [Teardown]      Close Browser
 
-Auto Pass 
-    ${head}=    Convert To Integer    12
-    Log    Hello World!
-    Log    ${CURDIR}
-
-    FOR     ${i}  IN  ${head}
-        Log     ${i}
-    END
-
-
+    
 Auto Pass 2
     ${head}=    Convert To Integer    12
     Log    Hello World!
